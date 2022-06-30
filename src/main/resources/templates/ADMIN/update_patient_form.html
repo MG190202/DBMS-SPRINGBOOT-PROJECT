@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="ADMIN/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+    <div class="card">
+        <div class="card-body">
+            <h1 class="text-center">UPDATE STAFF INFORMATION</h1>
+
+            <div class="container-fluid mt-1">
+                <div class="row">
+                    <div class="offset-md-1 col-md-10">
+                        <form action="#"
+                              th:object="${patient}"
+                              enctype="multipart/form-data"
+                              method="POST"
+                              th:action="@{'/admin/processup-patient/'+${staff.name}+'/'+${pn}}"
+                        class="mt-2"
+                        >
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input required type="text" name="name" id="name" placeholder="ENTER NAME" class="form-control"/>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input required type="text" name="DOB" id="DOB" placeholder="ENTER DOB" class="form-control"/>
+                        </div>
+
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input required type="text" name="gender" id="gender" placeholder="ENTER GENDER" class="form-control"/>
+                        </div>
+
+
+
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input required type="text" name="bloodgroup" id="bloodgroup" placeholder="ENTER BLOODGROUP" class="form-control"/>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input required type="text" name="mobileNo" id="mobileNo" placeholder="ENTER MOBILE NUMBER" class="form-control"/>
+                        </div>
+
+                        <div class="container">
+                            <button>SAVE CHANGES</button>
+                        </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+</body>
+</html>
